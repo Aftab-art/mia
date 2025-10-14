@@ -1,0 +1,61 @@
+# Alternative requirements for better compatibility
+# Use this if the main requirements.txt still causes distutils issues
+
+# Core FastAPI and web framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+python-dotenv==1.0.0
+
+# Database
+sqlalchemy==2.0.23
+alembic==1.12.1
+psycopg2-binary==2.9.9
+
+# Authentication and security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+pyotp==2.9.0
+
+# Computer vision - using dlib-based face recognition (more stable)
+opencv-python==4.8.1.78
+# face-recognition==1.3.0  # Commented out - causes distutils issues
+dlib==19.24.2  # Alternative face recognition library
+pillow==10.1.0
+numpy==1.24.3
+
+# QR Code generation
+qrcode[pil]==7.4.2
+
+# Data handling
+pandas==2.1.3
+python-dateutil==2.8.2
+pytz==2023.3
+
+# Pydantic for data validation
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# HTTP client
+httpx==0.25.2
+
+# Email validation
+email-validator==2.1.0
+
+# SMS notifications
+twilio==8.10.3
+
+# Template engine
+jinja2==3.1.2
+
+# File handling
+aiofiles==23.2.1
+
+# Task queue (optional)
+redis==5.0.1
+celery==5.3.4
+
+# Essential build tools
+setuptools>=65.0.0
+wheel>=0.40.0
+cmake>=3.25.0  # Required for dlib compilation

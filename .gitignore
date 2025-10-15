@@ -44,9 +44,6 @@ venv.bak/
 *.sqlite3
 mfa_attendance.db
 
-# Face Recognition Data (SENSITIVE - biometric data)
-face_encodings/
-backend/face_encodings/
 
 # Environment variables
 .env

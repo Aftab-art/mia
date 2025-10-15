@@ -16,7 +16,6 @@ import Register from "./components/Register";
 import Dashboard from "./components/Dashboard";
 import Attendance from "./components/Attendance";
 import Profile from "./components/Profile";
-import AdminPanel from "./components/AdminPanel";
 import LoadingSpinner from "./components/LoadingSpinner";
 
 function App() {
@@ -82,14 +81,6 @@ function App() {
                   to="/profile"
                   sx={{ color: "white" }}
                 />
-                {user.is_admin && (
-                  <Tab
-                    label="Admin"
-                    component={RouterLink}
-                    to="/admin"
-                    sx={{ color: "white" }}
-                  />
-                )}
               </Tabs>
 
               <Typography variant="body2" sx={{ marginRight: 2 }}>
@@ -127,16 +118,6 @@ function App() {
           <Route
             path="/profile"
             element={user ? <Profile /> : <Navigate to="/login" />}
-          />
-          <Route
-            path="/admin"
-            element={
-              user && user.is_admin ? (
-                <AdminPanel />
-              ) : (
-                <Navigate to="/dashboard" />
-              )
-            }
           />
           <Route
             path="/"

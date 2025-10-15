@@ -20,7 +20,7 @@ import {
 import {
   Login,
   Logout,
-  Schedule,
+  CalendarToday,
   TrendingUp,
   LocationOn,
 } from "@mui/icons-material";
@@ -161,7 +161,7 @@ const Attendance = () => {
             <Card>
               <CardContent>
                 <Box display="flex" alignItems="center" mb={2}>
-                  <Schedule sx={{ mr: 1 }} />
+                  <CalendarToday sx={{ mr: 1 }} />
                   <Typography variant="h6">Today's Status</Typography>
                 </Box>
 

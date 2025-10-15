@@ -7,7 +7,7 @@ from contextlib import asynccontextmanager
 
 from database import engine, get_db
 from models import Base
-from routers import auth, attendance, admin, storage
+from routers import auth, attendance, storage
 from services.auth_service import AuthService
 from config import settings
 
@@ -45,7 +45,6 @@ app.add_middleware(
 # Include routers
 app.include_router(auth.router, prefix="/api/auth", tags=["Authentication"])
 app.include_router(attendance.router, prefix="/api/attendance", tags=["Attendance"])
-app.include_router(admin.router, prefix="/api/admin", tags=["Admin"])
 app.include_router(storage.router, prefix="/api/storage", tags=["Storage Management"])
 
 @app.get("/")
